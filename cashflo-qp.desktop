@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=cashflo-qp
+Comment=Interest & Discount Calculator
+Exec=cashflo-qp
+Terminal=false
+Type=Application
+Categories=Office;
+MimeType=text/plain;
+Icon=cashflo

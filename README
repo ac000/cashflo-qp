@@ -1,0 +1,75 @@
+Overview
+========
+
+This is a very simple utility to show the difference between paying a supplier
+after a longer number of days and earning interest on that or paying them
+quicker in return for a discount.
+
+
+How it Works
+============
+
+To do this, it needs six pieces of information.
+
+    1) The amount. This would be the amount of the invoice.
+
+    2) Interest Rate. This will just be a yearly rate.
+
+    3) Interest Type. This is how the bank calculates the interest. It will
+       be one of two ways.
+
+	* EAR. This is the Effective Annual Rate. It is defined as;
+
+			r = (1 + i/n)^n - 1
+
+	       Where i is the nominal rate (aka APR) and n is the
+	       compounding frequency.
+
+	* APR. This is the Annual Percentage Rate. This can be defined in
+	       terms of the EAR as:
+
+			r = n * ((1 + EAR)^(1/n) - 1)
+
+	See do_calc() for how these are actually calculated.
+
+    4) Normal Payment Terms. This is how long you normally wait until you
+       pay a supplier, in days.
+
+    5) Quick Payment Terms. This is how long you have agreed to pay the
+       supplier for a quick payment, in days.
+
+    6) Supplier Discount. This is how much you'd get back from the supplier
+       for quick payments as a percentage.
+
+Given this information, it will then tell you how much interest you would
+have lost over the period (Normal Payment Terms - Quick Payment Terms) for
+the given amount.
+
+It will tell you how much discount you would get from the supplier on that
+amount for a quick payment.
+
+Lastly it will work out at what point the interest lost and supplier
+discount converge and give you this in days. For a given EAR it
+can work this out exactly. For an APR it can approximate it to within a
+day.
+
+
+Caveats
+=======
+
+This will likely only work for UK banks.
+
+It doesn't do anything special with leap years.
+
+
+Building / Running
+==================
+
+See INSTALL
+
+
+License
+=======
+
+This application is licensed under the GNU General Public License version 2.
+See COPYING
