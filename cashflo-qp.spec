@@ -4,7 +4,7 @@ Version:	001
 Release:	1.otl%{?dist}
 Group:		Applications/Productivity
 License:	GPLv2
-URL:		https://github.com/opentechlabs/cashflo
+URL:		https://github.com/opentechlabs/cashflo-qp
 Vendor:		OpenTech Labs
 Packager:	Andrew Clayton <andrew@opentechlabs.co.uk>
 Source0:	cashflo-qp-%{version}.tar
