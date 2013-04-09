@@ -35,7 +35,7 @@ struct widgets {
 	GtkWidget *disc_entry;
 	GtkTextBuffer *buffer;
 	GtkTextBuffer *readme_buffer;
-} widgets;
+};
 
 static void do_calc(struct widgets *widgets)
 {
